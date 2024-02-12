@@ -38,4 +38,14 @@ describe("Sort", () => {
 		expect(toSort.length).toEqual(5);
         expect(toSort).toEqual([1, 2, 3, 4, 5]);
 	});
+
+
+    it("Should sort with negative numbers, zero and large numbers", () => {
+        let toSort: number[] = [-5, -83727626642, 55, 18, 0, 3827262645251821];
+        toSort.length == 0;
+        sorter.quickSort(toSort);
+
+		expect(toSort.length).toEqual(6);
+        expect(toSort).toEqual([-83727626642, -5, 0, 18, 55, 3827262645251821]);
+	});
 });
